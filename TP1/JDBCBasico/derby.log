@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Wed Sep 03 10:52:01 GMT-03:00 2025:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.17.1.0 - (1913217): instance a816c00e-0199-0fd9-4238-000006f66ad0 
+on database directory /home/jowi/IdeaProjects/Arqui/TP1/JDBCBasico/MyDerbyDB with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@18b4aac2 
+Loaded from file:/home/jowi/.m2/repository/org/apache/derby/derby/10.17.1.0/derby-10.17.1.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=24+36-3646
+user.dir=/home/jowi/IdeaProjects/Arqui/TP1/JDBCBasico
+os.name=Linux
+os.arch=amd64
+os.version=6.14.0-27-generic
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
