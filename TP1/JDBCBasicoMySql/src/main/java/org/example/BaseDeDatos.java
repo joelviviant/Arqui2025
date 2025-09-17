@@ -24,10 +24,10 @@ public class BaseDeDatos {
             throw new RuntimeException(e);
         }
 
-        String uri = "jdbc:mysql://localhost:3306/exampleDB";
+        String uri = "jdbc:mysql://localhost:3306/tpe1";
 
         try {
-            Connection conn = DriverManager.getConnection(uri, "root", "");
+            Connection conn = DriverManager.getConnection(uri, "root", "password");
             conn.setAutoCommit(false);
             createTables(conn);
             addPerson(conn, 1 , "Juan", 20);
