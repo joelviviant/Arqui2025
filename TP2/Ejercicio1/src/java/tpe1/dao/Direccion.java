@@ -1,6 +1,9 @@
 package tpe1.dao;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
 @Entity
 public class Direccion {
@@ -12,9 +15,12 @@ public class Direccion {
     private String ciudad;
     @Column
     private String calle;
+    @OneToMany(mappedBy = "domicilio", fetch = FetchType.LAZY)
+    private List<Persona> habitantes;
 
     public Direccion() {
         super();
+        this.habitantes = new ArrayList<Persona>();
     }
 
     public Direccion(String ciudad, String calle) {
