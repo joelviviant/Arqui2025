@@ -7,7 +7,7 @@ import java.util.List;
 public class Persona {
     @Id
     private int id;
-    @Column
+    @Column(nullable = false)
     private String nombre;
     @Column(name = "anios")
     private int  edad;
