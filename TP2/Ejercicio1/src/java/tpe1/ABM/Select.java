@@ -9,10 +9,11 @@ import javax.persistence.Persistence;
 import java.util.List;
 
 public class Select {
+    static EntityManagerFactory emf = Persistence.createEntityManagerFactory("tpe2");
 
     public static void main(String[] args) {
 
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpaBasico");
+
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
         Persona j = em.find(Persona.class,2);
@@ -22,6 +23,10 @@ public class Select {
         em.persist(j);
         em.getTransaction().commit();
         em.close();
+    }
+
+    public static void cerrar(){
         emf.close();
-    } }
+    }
+}
 

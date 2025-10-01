@@ -56,4 +56,8 @@ public class Turno {
                 ", jugadores=" + jugadores +
                 '}';
     }
+
+    public void setFecha(java.sql.Timestamp timestamp) {
+        this.fecha = fecha;
+    }
 }

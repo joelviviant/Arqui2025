@@ -1,25 +1,25 @@
-package tpe1.ABM;
+package tpe1;
 
-import tpe1.dao.Direccion;
 import tpe1.dao.Persona;
+import tpe1.dao.Turno;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import java.sql.Timestamp;
+import java.time.LocalDate;
 
-public class Insert {
-
+public class Main {
     public static void main(String[] args) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("tpe2");
         EntityManager em = emf.createEntityManager();
+
         em.getTransaction().begin();
-        Direccion d = new Direccion("Tandil", "Sarmiento 987");
-        em.persist(d);
-        Persona j = new Persona(2,"Juan",23,d );
-        Persona a = new Persona(1,"Ana",25,d );
-        em.persist(j);
-        em.persist(a);
+       Persona persona = new Persona();
+       persona.setNombre("Ana");
+       em.persist(persona);
         em.getTransaction().commit();
+
         em.close();
         emf.close();
     }
