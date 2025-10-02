@@ -12,14 +12,6 @@ public class Insert {
     public static void main(String[] args) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("tpe2");
         EntityManager em = emf.createEntityManager();
-        em.getTransaction().begin();
-        Direccion d = new Direccion("Tandil", "Sarmiento 987");
-        em.persist(d);
-        Persona j = new Persona(2,"Juan",23,d );
-        Persona a = new Persona(1,"Ana",25,d );
-        em.persist(j);
-        em.persist(a);
-        em.getTransaction().commit();
         em.close();
         emf.close();
     }
