@@ -15,7 +15,7 @@
             <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/tpe1" />
             <property name="javax.persistence.jdbc.user" value="root" />
-            <property name="javax.persistence.jdbc.password" value="password" />
+            <property name="javax.persistence.jdbc.password" value="" />
 
             <!-- Propiedad para la generación automática del esquema de base de datos -->
             <property name="hibernate.hbm2ddl.auto" value="update" />
