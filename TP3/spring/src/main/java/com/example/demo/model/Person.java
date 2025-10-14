@@ -12,7 +12,7 @@ import javax.persistence.ManyToOne;
 public class Person {
 
     @Id
-    private Long dni;
+    private int dni;
     @Column
     private String name;
     @Column
@@ -24,9 +24,10 @@ public class Person {
     public Person() {
     }
 
-    public Person(Long dni, String name, String surname, Address address) {
+    public Person(int dni, String name, String surname, String address) {
         this.dni = dni;
         this.name = name;
         this.surname = surname;
     }
+
 }
