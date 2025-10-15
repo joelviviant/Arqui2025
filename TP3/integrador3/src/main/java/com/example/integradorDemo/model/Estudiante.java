@@ -1,4 +1,4 @@
-package com.example.demo.model;
+package com.example.integradorDemo.model;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -8,12 +8,13 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Persona {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Estudiante{
     private String nombre;
     private String apellido;
     private int edad;
-    private String email;
+    private String genero;
+    @Id
+    private int dni;
+    private String ciudad;
+    private int numeroLibreta;
 }

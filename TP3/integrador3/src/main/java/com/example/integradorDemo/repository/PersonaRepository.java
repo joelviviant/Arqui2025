@@ -1,6 +1,6 @@
-package com.example.demo.repository;
+package com.example.integradorDemo.repository;
 
-import com.example.demo.model.Persona;
+import com.example.integradorDemo.model.Persona;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface PersonaRepository extends JpaRepository<Persona, Long> {

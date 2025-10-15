@@ -1,7 +1,7 @@
-package com.example.demo.config;
+package com.example.integradorDemo.config;
 
-import com.example.demo.model.Persona;
-import com.example.demo.repository.PersonaRepository;
+import com.example.integradorDemo.model.Persona;
+import com.example.integradorDemo.repository.PersonaRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
