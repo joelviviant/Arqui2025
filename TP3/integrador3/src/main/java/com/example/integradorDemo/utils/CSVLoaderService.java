@@ -10,12 +10,13 @@ import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
+
 
 import java.io.FileReader;
 import java.io.IOException;
 
-@Service
+@Component
 public class CSVLoaderService {
 
     private static final String CARRERAS_CSV = "src/main/resources/carreras.csv";
