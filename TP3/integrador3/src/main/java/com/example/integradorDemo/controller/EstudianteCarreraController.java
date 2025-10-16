@@ -1,17 +1,25 @@
 package com.example.integradorDemo.controller;
 
-import com.example.integradorDemo.repository.EstudianteCarreraRepository;
-import com.example.integradorDemo.repository.EstudianteRepository;
+import com.example.integradorDemo.dto.EstudianteCarreraDTO;
+import com.example.integradorDemo.service.EstudianteCarreraService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
-@RequestMapping("/personas")
+@RequestMapping("/estudianteCarrera")
 public class EstudianteCarreraController {
 
-    private final EstudianteCarreraRepository repository;
-
-    public EstudianteCarreraController(EstudianteCarreraRepository repository) {
-        this.repository = repository;
+    @Autowired
+    private EstudianteCarreraService estudianteCarreraService;
+    @GetMapping("")
+    public List<EstudianteCarreraDTO> getAll() {
+        return estudianteCarreraService.getAll();
     }
 
+    @PostMapping("/inscribir")
+    public EstudianteCarreraDTO inscribir(@RequestBody EstudianteCarreraDTO dto) {
+        return estudianteCarreraService.inscribirEnCarrera(dto);
+    }
 }

@@ -10,6 +10,7 @@ import lombok.*;
 @Builder
 public class EstudianteCarrera {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private int inscripcion;
     private int graduacion;

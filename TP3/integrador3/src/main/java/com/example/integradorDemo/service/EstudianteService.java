@@ -1,5 +1,6 @@
 package com.example.integradorDemo.service;
 
+import com.example.integradorDemo.dto.EstudianteDTO;
 import com.example.integradorDemo.model.Estudiante;
 import com.example.integradorDemo.repository.EstudianteRepository;
 import jakarta.transaction.Transactional;
@@ -19,5 +20,21 @@ public class EstudianteService {
     @Transactional
     public List<Estudiante> findAll() {
         return estudianteRepository.findAll();
+    }
+
+    @Transactional
+
+    public Estudiante crearEstudiante(EstudianteDTO dto) {
+        Estudiante estudiante = new Estudiante(
+                dto.getNombre(),
+                dto.getApellido(),
+                dto.getEdad(),
+                dto.getGenero(),
+                dto.getDni(),
+                dto.getCiudad(),
+                dto.getNumeroLibreta()
+        );
+
+        return estudianteRepository.save(estudiante);
     }
 }
